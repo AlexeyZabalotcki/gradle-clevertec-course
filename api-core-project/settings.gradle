@@ -1,0 +1,2 @@
+rootProject.name = 'api-core-project'
+include('api', 'core')

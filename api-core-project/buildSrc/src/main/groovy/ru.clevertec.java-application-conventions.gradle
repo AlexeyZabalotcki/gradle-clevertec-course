@@ -1,0 +1,4 @@
+plugins {
+    id 'ru.clevertec.java-common-conventions'
+    id 'application'
+}

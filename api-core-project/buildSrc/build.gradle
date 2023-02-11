@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+apply plugin: 'groovy'
+apply plugin: 'java-gradle-plugin'
+
+group = 'ru.clevertec'
+version = '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': project.version)
+    }
+}
+
+
+
+gradlePlugin {
+    plugins {
+        page {
+            id = 'ru.clevertec.page'
+            implementationClass = 'ru.clevertec.page.PagePlugin'
+        }
+    }
+}
+
+
